@@ -10,32 +10,7 @@ Windows-QuadClient und im [QC-Client](https://github.com/BadSmiley0815/QC-Client
 
 ## Vorlagen
 
-| ID (vorläufig) | Name | Inhalt |
-|---|---|---|
-| 99-4 | Wetterstation | Werte einer Wetterstation am KNX: Temperatur, Luftfeuchte, Wind, Windrichtung, Regen, Helligkeit, Luftdruck |
-
-### 99-4 Wetterstation
-
-Nur Anzeige, es wird nichts gesendet. Für eigene oder Gira-Wetterstationen, auch für Werte aus einem Logikbaustein.
-
-- **Zeile:** Thermometer + Temperatur · Wind + Geschwindigkeit · Luftfeuchte (Symbol wird bei Regen zur Regenwolke)
-- **Antippen:** Popup mit allen Werten
-- **Anschlüsse** (Datentyp steht in der Bezeichnung, nur Temperatur ist Pflicht):
-
-  | Slot | Wert | Datentyp |
-  |---|---|---|
-  | `slot_temp` | Temperatur | 2 Byte Gleitkomma (DPT 9.001) |
-  | `slot_hum` | Luftfeuchte | 2 Byte Gleitkomma (9.007) oder 1 Byte (5.001) |
-  | `slot_wind` | Windgeschwindigkeit | 2 Byte Gleitkomma (9.005 / 9.028) |
-  | `slot_wind_dir` | Windrichtung in Grad, 0 = Nord | 1 Byte Winkel (5.003) oder Zahl |
-  | `slot_rain` | Regen, 1 = Regen | 1 Bit (DPT 1.x) |
-  | `slot_lux` | Helligkeit | 2 Byte Gleitkomma (9.004) oder 4 Byte |
-  | `slot_press` | Luftdruck | 2 Byte Gleitkomma oder 4 Byte |
-
-- **Parameter:** Überschrift des Popups, Einheiten für Wind, Helligkeit und Luftdruck.
-- **QC-Client:** Das Wetter-Plugin nimmt die Werte dieser Vorlage für „Jetzt“ (ab v0.9.34), die Vorhersage kommt von Open-Meteo.
-
-![Popup 99-4 im QC-Client](99-4_Wetterstation/popup.png)
+Noch keine. (Die Wetterstation wird stattdessen als Plugin umgesetzt – siehe [QC-Plugin](https://github.com/BadSmiley0815/QC-Plugin).)
 
 ## Installation
 

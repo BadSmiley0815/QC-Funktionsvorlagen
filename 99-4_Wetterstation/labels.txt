@@ -1,4 +1,0 @@
-99-4_tpl_ico_temp=Wetterstation Temperatur
-99-4_tpl_ico_wind=Wetterstation Wind
-99-4_tpl_ico_hum=Wetterstation Luftfeuchte
-99-4_tpl_ico_rain=Wetterstation Regen
