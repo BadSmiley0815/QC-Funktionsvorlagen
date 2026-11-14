@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='utf-8'?>
+<language>
+  <text key="#99-4_tplname" default="Wetterstation">
+    <lang id="de" value="Wetterstation" />
+    <lang id="en" value="Weather station" />
+  </text>
+  <text key="#99-4_temp" default="Temperatur">
+    <lang id="de" value="Temperatur" />
+    <lang id="en" value="Temperature" />
+  </text>
+  <text key="#99-4_hum" default="Luftfeuchte">
+    <lang id="de" value="Luftfeuchte" />
+    <lang id="en" value="Humidity" />
+  </text>
+  <text key="#99-4_wind" default="Wind">
+    <lang id="de" value="Wind" />
+    <lang id="en" value="Wind" />
+  </text>
+  <text key="#99-4_wind_dir" default="Windrichtung">
+    <lang id="de" value="Windrichtung" />
+    <lang id="en" value="Wind direction" />
+  </text>
+  <text key="#99-4_rain" default="Niederschlag">
+    <lang id="de" value="Niederschlag" />
+    <lang id="en" value="Precipitation" />
+  </text>
+  <text key="#99-4_rain_yes" default="Regen">
+    <lang id="de" value="Regen" />
+    <lang id="en" value="Rain" />
+  </text>
+  <text key="#99-4_rain_no" default="trocken">
+    <lang id="de" value="trocken" />
+    <lang id="en" value="dry" />
+  </text>
+  <text key="#99-4_lux" default="Helligkeit">
+    <lang id="de" value="Helligkeit" />
+    <lang id="en" value="Brightness" />
+  </text>
+  <text key="#99-4_press" default="Luftdruck">
+    <lang id="de" value="Luftdruck" />
+    <lang id="en" value="Air pressure" />
+  </text>
+  <text key="#99-4_slot_temp" default="Temperatur (2 Byte Gleitkomma, °C)">
+    <lang id="de" value="Temperatur (2 Byte Gleitkomma, °C)" />
+    <lang id="en" value="Temperature (2 byte float, °C)" />
+  </text>
+  <text key="#99-4_slot_temp_hlp" default="Außentemperatur der Wetterstation – DPT 9.001">
+    <lang id="de" value="Außentemperatur der Wetterstation – DPT 9.001" />
+    <lang id="en" value="Outside temperature – DPT 9.001" />
+  </text>
+  <text key="#99-4_slot_hum" default="Luftfeuchte (2 Byte Gleitkomma oder 1 Byte, %)">
+    <lang id="de" value="Luftfeuchte (2 Byte Gleitkomma oder 1 Byte, %)" />
+    <lang id="en" value="Humidity (2 byte float or 1 byte, %)" />
+  </text>
+  <text key="#99-4_slot_hum_hlp" default="Relative Luftfeuchte – DPT 9.007 oder 5.001 (optional)">
+    <lang id="de" value="Relative Luftfeuchte – DPT 9.007 oder 5.001 (optional)" />
+    <lang id="en" value="Relative humidity – DPT 9.007 or 5.001 (optional)" />
+  </text>
+  <text key="#99-4_slot_wind" default="Windgeschwindigkeit (2 Byte Gleitkomma)">
+    <lang id="de" value="Windgeschwindigkeit (2 Byte Gleitkomma)" />
+    <lang id="en" value="Wind speed (2 byte float)" />
+  </text>
+  <text key="#99-4_slot_wind_hlp" default="Windgeschwindigkeit – DPT 9.005 (m/s) oder 9.028 (km/h); Einheit im Parameter (optional)">
+    <lang id="de" value="Windgeschwindigkeit – DPT 9.005 (m/s) oder 9.028 (km/h); Einheit im Parameter (optional)" />
+    <lang id="en" value="Wind speed – DPT 9.005 or 9.028; unit in parameter (optional)" />
+  </text>
+  <text key="#99-4_slot_wind_dir" default="Windrichtung (1 Byte Winkel oder 2 Byte, Grad)">
+    <lang id="de" value="Windrichtung (1 Byte Winkel oder 2 Byte, Grad)" />
+    <lang id="en" value="Wind direction (1 byte angle or 2 byte, degrees)" />
+  </text>
+  <text key="#99-4_slot_wind_dir_hlp" default="Windrichtung in Grad, 0 = Nord, 90 = Ost – DPT 5.003 oder 9.x (optional)">
+    <lang id="de" value="Windrichtung in Grad, 0 = Nord, 90 = Ost – DPT 5.003 oder 9.x (optional)" />
+    <lang id="en" value="Wind direction in degrees, 0 = north – DPT 5.003 or 9.x (optional)" />
+  </text>
+  <text key="#99-4_slot_rain" default="Regen (1 Bit, 1 = Regen)">
+    <lang id="de" value="Regen (1 Bit, 1 = Regen)" />
+    <lang id="en" value="Rain (1 bit, 1 = rain)" />
+  </text>
+  <text key="#99-4_slot_rain_hlp" default="Regenmelder – DPT 1.x, 1 = Regen, 0 = trocken (optional)">
+    <lang id="de" value="Regenmelder – DPT 1.x, 1 = Regen, 0 = trocken (optional)" />
+    <lang id="en" value="Rain sensor – DPT 1.x (optional)" />
+  </text>
+  <text key="#99-4_slot_lux" default="Helligkeit (2 Byte Gleitkomma oder 4 Byte, Lux)">
+    <lang id="de" value="Helligkeit (2 Byte Gleitkomma oder 4 Byte, Lux)" />
+    <lang id="en" value="Brightness (2 byte float or 4 byte, lux)" />
+  </text>
+  <text key="#99-4_slot_lux_hlp" default="Helligkeit – DPT 9.004 oder 14.x (optional)">
+    <lang id="de" value="Helligkeit – DPT 9.004 oder 14.x (optional)" />
+    <lang id="en" value="Brightness – DPT 9.004 or 14.x (optional)" />
+  </text>
+  <text key="#99-4_slot_press" default="Luftdruck (2 Byte Gleitkomma oder 4 Byte, hPa)">
+    <lang id="de" value="Luftdruck (2 Byte Gleitkomma oder 4 Byte, hPa)" />
+    <lang id="en" value="Air pressure (2 byte float or 4 byte, hPa)" />
+  </text>
+  <text key="#99-4_slot_press_hlp" default="Luftdruck – DPT 9.006 (Pa, dann Einheit anpassen) oder 14.x (optional)">
+    <lang id="de" value="Luftdruck – DPT 9.006 (Pa, dann Einheit anpassen) oder 14.x (optional)" />
+    <lang id="en" value="Air pressure – DPT 9.006 or 14.x (optional)" />
+  </text>
+  <text key="#99-4_par_caption" default="Überschrift Popup">
+    <lang id="de" value="Überschrift Popup" />
+    <lang id="en" value="Popup caption" />
+  </text>
+  <text key="#99-4_par_caption_hlp" default="Text oben im Popup">
+    <lang id="de" value="Text oben im Popup" />
+    <lang id="en" value="Popup title" />
+  </text>
+  <text key="#99-4_par_wind_unit" default="Einheit Wind">
+    <lang id="de" value="Einheit Wind" />
+    <lang id="en" value="Wind unit" />
+  </text>
+  <text key="#99-4_par_wind_unit_hlp" default="z. B. km/h oder m/s – passend zum KO">
+    <lang id="de" value="z. B. km/h oder m/s – passend zum KO" />
+    <lang id="en" value="e.g. km/h or m/s" />
+  </text>
+  <text key="#99-4_par_lux_unit" default="Einheit Helligkeit">
+    <lang id="de" value="Einheit Helligkeit" />
+    <lang id="en" value="Brightness unit" />
+  </text>
+  <text key="#99-4_par_lux_unit_hlp" default="z. B. lx oder klx">
+    <lang id="de" value="z. B. lx oder klx" />
+    <lang id="en" value="e.g. lx or klx" />
+  </text>
+  <text key="#99-4_par_press_unit" default="Einheit Luftdruck">
+    <lang id="de" value="Einheit Luftdruck" />
+    <lang id="en" value="Pressure unit" />
+  </text>
+  <text key="#99-4_par_press_unit_hlp" default="z. B. hPa">
+    <lang id="de" value="z. B. hPa" />
+    <lang id="en" value="e.g. hPa" />
+  </text>
+</language>
