@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Funktionsvorlage 99-3: Icon-Test
+  Prüft eigene Symbole aus dem mitgelieferten Symbolpaket 99-3.hsm.
+
+  Panel 1: Taste schalten, Symbol wechselt Lampe aus/ein (eigene Symbole, Lampe ein farbig)
+  Panel 2: festes eigenes Symbol (Haus)
+-->
+<template>
+
+  <panel pos="1" click="1" layout="pan_singlebtn">
+    <icon layout="pan_togglebtn.full" ico="tpl_btn_grey_bg" />
+    <icon_dyn layout="pan_singlebtn.ico_n" ico="99-3_tpl_ico_off">
+      <content case_slot="switch">
+        <case from="1" from_type="2" to="1" to_type="2" ico="99-3_tpl_ico_on" />
+        <case from="0" from_type="2" to="0" to_type="2" ico="99-3_tpl_ico_off" />
+      </content>
+    </icon_dyn>
+    <action_up click="1" type="toggle" slot="switch" value="1" />
+  </panel>
+
+  <panel pos="2" click="0" layout="pan_singlebtn">
+    <icon layout="pan_singlebtn.ico_n" ico="99-3_tpl_ico_house" />
+  </panel>
+
+</template>

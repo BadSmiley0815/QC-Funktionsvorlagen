@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Funktionsvorlage: Klimaanlage Zennio KLIC-DI v2 / Daikin
+  Datei: interface.xml
+  Definiert die Konfigurationsschnittstelle (Slots, Parameter, Timer)
+  Aufbau gemaess Gira Template SDK V1.0
+-->
+<template has_timer="true" function_key="firing" folder="firing">
+
+  <slots>
+
+    <!-- ========== KOMMUNIKATIONSOBJEKTE - SENDEN ========== -->
+
+    <slot id="onoff_set" text="#99-1_onoff_set" help="#99-1_onoff_set_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="soll_temp_set" text="#99-1_soll_set" help="#99-1_soll_set_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="mode_set" text="#99-1_mode_set" help="#99-1_mode_set_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="fan_set" text="#99-1_fan_set" help="#99-1_fan_set_hlp"
+          type="KO_NUM" required="true" />
+
+    <!-- ========== KOMMUNIKATIONSOBJEKTE - RUECKMELDUNGEN ========== -->
+
+    <slot id="onoff_status" text="#99-1_onoff_status" help="#99-1_onoff_status_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="soll_temp_status" text="#99-1_soll_status" help="#99-1_soll_status_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="ist_temp" text="#99-1_ist_temp" help="#99-1_ist_temp_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="mode_status" text="#99-1_mode_status" help="#99-1_mode_status_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="fan_status" text="#99-1_fan_status" help="#99-1_fan_status_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="error_active" text="#99-1_error_active" help="#99-1_error_active_hlp"
+          type="KO_NUM" required="false" />
+
+    <slot id="error_code" text="#99-1_error_code" help="#99-1_error_code_hlp"
+          type="KO_ALPHA" required="false" />
+
+    <slot id="filter_status" text="#99-1_filter_status" help="#99-1_filter_status_hlp"
+          type="KO_NUM" required="false" />
+
+    <slot id="filter_reset" text="#99-1_filter_reset" help="#99-1_filter_reset_hlp"
+          type="KO_NUM" required="false" />
+
+    <!-- ========== PARAMETER ========== -->
+
+    <parameter id="par_temp_min" text="#99-1_par_min" help="#99-1_par_min_hlp"
+               type="FLOAT" min="10" max="32" default="$soll_temp_set.min" />
+
+    <parameter id="par_temp_max" text="#99-1_par_max" help="#99-1_par_max_hlp"
+               type="FLOAT" min="10" max="32" default="$soll_temp_set.max" />
+
+    <parameter id="par_temp_skip" text="#99-1_par_skip" help="#99-1_par_skip_hlp"
+               type="FLOAT" min="0.5" max="5" default="0.5" />
+
+  </slots>
+
+  <!-- ========== ZEITSCHALTUHR-AKTIONEN ========== -->
+  <timer>
+    <action text="#99-1_tmr_on">
+      <cmd op="1" slot_id="onoff_set" value="1" />
+    </action>
+    <action text="#99-1_tmr_off">
+      <cmd op="1" slot_id="onoff_set" value="0" />
+    </action>
+    <action text="#99-1_tmr_mode_auto">
+      <cmd op="1" slot_id="mode_set" value="0" />
+    </action>
+    <action text="#99-1_tmr_mode_heat">
+      <cmd op="1" slot_id="mode_set" value="1" />
+    </action>
+    <action text="#99-1_tmr_mode_cool">
+      <cmd op="1" slot_id="mode_set" value="3" />
+    </action>
+    <action text="#99-1_tmr_mode_fan">
+      <cmd op="1" slot_id="mode_set" value="9" />
+    </action>
+    <action text="#99-1_tmr_mode_dry">
+      <cmd op="1" slot_id="mode_set" value="14" />
+    </action>
+  </timer>
+
+</template>

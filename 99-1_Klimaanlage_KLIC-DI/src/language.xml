@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  Sprachdatei fuer den QuadClient (Touchscreen-Anzeige)
+  Diese Texte erscheinen in der Bedienoberflaeche fuer den Endnutzer
+-->
+<language>
+
+  <text key="#99-1_tplname" default="Klimaanlage">
+    <lang id="de" value="Klimaanlage" />
+    <lang id="en" value="Air conditioner" />
+    <lang id="fr" value="Climatisation" />
+    <lang id="nl" value="Airconditioning" />
+    <lang id="es" value="Climatizador" />
+    <lang id="it" value="Climatizzatore" />
+  </text>
+
+</language>

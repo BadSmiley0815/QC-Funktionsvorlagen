@@ -10,7 +10,79 @@ Windows-QuadClient und im [QC-Client](https://github.com/BadSmiley0815/QC-Client
 
 ## Vorlagen
 
-Noch keine. (Die Wetterstation wird stattdessen als Plugin umgesetzt – siehe [QC-Plugin](https://github.com/BadSmiley0815/QC-Plugin).)
+| ID (vorläufig) | Name | Inhalt |
+|---|---|---|
+| 99-1 | Klimaanlage KLIC-DI | Daikin-Klimaanlage über Zennio KLIC-DI v2: Ein/Aus, Solltemperatur, Betriebsart, 2 Lüfterstufen, Ist-Temperatur, Filter, Fehler |
+| 99-2 | Poolüberschuss | PV-Überschuss in W und Speicher-SOC in %, Grenzwerte Pmin/Pmax und SOC min/max einstellbar |
+| 99-3 | Icon-Test | Test für eigene Symbole in Vorlagen (Symbolpaket `.hsm`), im Windows-QC bestätigt |
+
+Die fertigen `.hst` in `dist/` sind die getesteten Fassungen. `./tools/build.sh` baut sie aus `src/` neu.
+
+### 99-1 Klimaanlage KLIC-DI
+
+Für eine Daikin-Klimaanlage am Zennio KLIC-DI v2.
+
+- **Zeile:** links Ein/Aus mit Anzeige der Betriebsart, rechts Soll-/Ist-Temperatur; Antippen öffnet das Popup.
+- **Popup:** Ein/Aus, Solltemperatur −/+, Betriebsart (Auto, Heizen, Kühlen, Lüften, Trocknen – HVAC-Werte 0/1/3/9/14),
+  Lüfterstufe 1/2 (50 % / 100 %), Filter-Reset, Fehleranzeige.
+- **Anschlüsse:**
+
+  | Slot | Bezeichnung | Typ | Pflicht |
+  |---|---|---|---|
+  | `onoff_set` | Ein/Aus (senden) | KO_NUM | ja |
+  | `soll_temp_set` | Solltemperatur (senden) | KO_NUM | ja |
+  | `mode_set` | Betriebsmodus (senden) | KO_NUM | ja |
+  | `fan_set` | Luefterstufe (senden) | KO_NUM | ja |
+  | `onoff_status` | Ein/Aus Status | KO_NUM | ja |
+  | `soll_temp_status` | Solltemperatur Status | KO_NUM | ja |
+  | `ist_temp` | Isttemperatur (Raum) | KO_NUM | ja |
+  | `mode_status` | Modus Status | KO_NUM | ja |
+  | `fan_status` | Luefterstufe Status | KO_NUM | ja |
+  | `error_active` | Stoerung aktiv | KO_NUM | – |
+  | `error_code` | Fehlercode | KO_ALPHA | – |
+  | `filter_status` | Filter verstopft (Status) | KO_NUM | – |
+  | `filter_reset` | Filter Reset (senden) | KO_NUM | – |
+
+![Zeile 99-1 im QC-Client](99-1_Klimaanlage_KLIC-DI/zeile.png)
+
+![Popup 99-1 im QC-Client](99-1_Klimaanlage_KLIC-DI/popup.png)
+
+*Dargestellt im [QC-Client](https://github.com/BadSmiley0815/QC-Client) mit Beispielwerten.*
+
+### 99-2 Poolüberschuss
+
+Für eine Poolheizung, die nur mit PV-Überschuss laufen soll.
+
+- **Zeile:** aktueller Überschuss in W und Speicher-SOC in % (Batteriesymbol wechselt mit dem Ladestand).
+- **Popup:** Grenzwerte Pmin/Pmax (W) und SOC min/max (%) eingeben.
+- **Anschlüsse:**
+
+  | Slot | Bezeichnung | Typ | Pflicht |
+  |---|---|---|---|
+  | `power_max_set` | Obere Leistungsgrenze (W) | KO_NUM | ja |
+  | `power_min_set` | Untere Leistungsgrenze (W) | KO_NUM | ja |
+  | `soc_max_set` | Oberer SOC-Grenzwert (%) | KO_NUM | ja |
+  | `soc_min_set` | Unterer SOC-Grenzwert (%) | KO_NUM | ja |
+  | `power_actual` | Aktueller Ueberschuss (W) | KO_NUM | ja |
+  | `soc_actual` | Aktueller SOC (%) | KO_NUM | ja |
+
+![99-2 im Windows-QuadClient](99-2_Poolueberschuss/quadclient.png)
+
+*Im Windows-QuadClient.*
+
+### 99-3 Icon-Test
+
+Zeigt, wie eine Vorlage eigene Symbole mitbringt: Die Symbole liegen als einfache SVG in `icons/`,
+`tools/hsm-build.py` erzeugt daraus das Symbolpaket `99-3.hsm` und packt es in die `.hst`.
+
+- **Zeile:** Taste schaltet ein 1-Bit-KO, das Symbol wechselt Lampe aus/ein; daneben ein festes eigenes Symbol.
+- **Anschluss:**
+
+  | Slot | Bezeichnung | Typ | Pflicht |
+  |---|---|---|---|
+  | `switch` | Schalten | KO_NUM | ja |
+
+![Zeile 99-3 im QC-Client](99-3_Icon-Test/zeile.png)
 
 ## Installation
 
@@ -23,13 +95,14 @@ Noch keine. (Die Wetterstation wird stattdessen als Plugin umgesetzt – siehe [
 ```
 <ID>_<Name>/
   src/       version.xml, interface.xml, template.xml, language.xml, config_lang.xml
-  icons/     eigene Symbole als einfache SVG (nur Pfade, 40×40)
-  labels.txt Symbolnamen für die Auswahl im Experten
+  icons/     (optional) eigene Symbole als einfache SVG (nur Pfade, 40×40)
+  labels.txt (optional) Symbolnamen für die Auswahl im Experten
+  *.png      Beispielbilder
 dist/        fertige .hst
 tools/       hsm-build.py (Symbolpaket .hsm + .hst), build.sh (alle Vorlagen bauen)
 ```
 
-Bauen: `./tools/build.sh` (benötigt Python 3 und `rsvg-convert`).
+Bauen: `./tools/build.sh` (benötigt Python 3, `zip` und für eigene Symbole `rsvg-convert`).
 Bei jeder Änderung die Version in `src/version.xml` erhöhen.
 
 ## Lizenz

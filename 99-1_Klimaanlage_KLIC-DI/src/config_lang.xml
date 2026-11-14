@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--
+  Sprachdatei fuer den QuadConfig (HS/FS Experte)
+  Unterstuetzt nur de und en
+-->
+<language>
+
+  <!-- Vorlagenname -->
+  <text key="#99-1_tplname" default="Klimaanlage (KLIC-DI v2)">
+    <lang id="de" value="Klimaanlage (KLIC-DI v2)" />
+    <lang id="en" value="Air conditioner (KLIC-DI v2)" />
+  </text>
+
+  <!-- Slots: Senden -->
+  <text key="#99-1_onoff_set" default="Ein/Aus (senden)">
+    <lang id="de" value="Ein/Aus (senden)" />
+    <lang id="en" value="On/Off (send)" />
+  </text>
+  <text key="#99-1_onoff_set_hlp" default="1 Bit - Schaltet die Klimaanlage ein bzw. aus">
+    <lang id="de" value="1 Bit - Schaltet die Klimaanlage ein bzw. aus" />
+    <lang id="en" value="1 bit - Switches the AC unit on/off" />
+  </text>
+
+  <text key="#99-1_soll_set" default="Solltemperatur (senden)">
+    <lang id="de" value="Solltemperatur (senden)" />
+    <lang id="en" value="Setpoint temperature (send)" />
+  </text>
+  <text key="#99-1_soll_set_hlp" default="2 Byte Float (DPT 9.001) - Solltemperatur in Grad Celsius">
+    <lang id="de" value="2 Byte Float (DPT 9.001) - Solltemperatur in Grad Celsius" />
+    <lang id="en" value="2 byte float (DPT 9.001) - Setpoint temperature in degrees Celsius" />
+  </text>
+
+  <text key="#99-1_mode_set" default="Betriebsmodus (senden)">
+    <lang id="de" value="Betriebsmodus (senden)" />
+    <lang id="en" value="Operating mode (send)" />
+  </text>
+  <text key="#99-1_mode_set_hlp" default="1 Byte (DPT 20.105) - 0=Auto, 1=Heizen, 3=Kuehlen, 9=Lueften, 14=Trocknen">
+    <lang id="de" value="1 Byte (DPT 20.105) - 0=Auto, 1=Heizen, 3=Kuehlen, 9=Lueften, 14=Trocknen" />
+    <lang id="en" value="1 byte (DPT 20.105) - 0=Auto, 1=Heat, 3=Cool, 9=Fan, 14=Dry" />
+  </text>
+
+  <text key="#99-1_fan_set" default="Luefterstufe (senden)">
+    <lang id="de" value="Luefterstufe (senden)" />
+    <lang id="en" value="Fan speed (send)" />
+  </text>
+  <text key="#99-1_fan_set_hlp" default="1 Byte Prozent (DPT 5.001) - Stufe 1 = 50%, Stufe 2 = 100%">
+    <lang id="de" value="1 Byte Prozent (DPT 5.001) - Stufe 1 = 50%, Stufe 2 = 100%" />
+    <lang id="en" value="1 byte percent (DPT 5.001) - Step 1 = 50%, Step 2 = 100%" />
+  </text>
+
+  <!-- Slots: Status -->
+  <text key="#99-1_onoff_status" default="Ein/Aus Status">
+    <lang id="de" value="Ein/Aus Status" />
+    <lang id="en" value="On/Off status" />
+  </text>
+  <text key="#99-1_onoff_status_hlp" default="1 Bit - Rueckmeldung des Ein/Aus-Zustands von der Anlage">
+    <lang id="de" value="1 Bit - Rueckmeldung des Ein/Aus-Zustands von der Anlage" />
+    <lang id="en" value="1 bit - Status feedback from the AC unit" />
+  </text>
+
+  <text key="#99-1_soll_status" default="Solltemperatur Status">
+    <lang id="de" value="Solltemperatur Status" />
+    <lang id="en" value="Setpoint status" />
+  </text>
+  <text key="#99-1_soll_status_hlp" default="2 Byte Float - Aktuell von der Anlage zurueckgemeldete Solltemperatur">
+    <lang id="de" value="2 Byte Float - Aktuell von der Anlage zurueckgemeldete Solltemperatur" />
+    <lang id="en" value="2 byte float - Setpoint feedback from AC unit" />
+  </text>
+
+  <text key="#99-1_ist_temp" default="Isttemperatur (Raum)">
+    <lang id="de" value="Isttemperatur (Raum)" />
+    <lang id="en" value="Actual temperature (room)" />
+  </text>
+  <text key="#99-1_ist_temp_hlp" default="2 Byte Float - Vom internen Fuehler der Klimaanlage gemessene Raumtemperatur">
+    <lang id="de" value="2 Byte Float - Vom internen Fuehler der Klimaanlage gemessene Raumtemperatur" />
+    <lang id="en" value="2 byte float - Room temperature measured by AC sensor" />
+  </text>
+
+  <text key="#99-1_mode_status" default="Modus Status">
+    <lang id="de" value="Modus Status" />
+    <lang id="en" value="Mode status" />
+  </text>
+  <text key="#99-1_mode_status_hlp" default="1 Byte - Rueckmeldung des aktuellen Betriebsmodus">
+    <lang id="de" value="1 Byte - Rueckmeldung des aktuellen Betriebsmodus" />
+    <lang id="en" value="1 byte - Mode feedback from AC unit" />
+  </text>
+
+  <text key="#99-1_fan_status" default="Luefterstufe Status">
+    <lang id="de" value="Luefterstufe Status" />
+    <lang id="en" value="Fan speed status" />
+  </text>
+  <text key="#99-1_fan_status_hlp" default="1 Byte Prozent (DPT 5.001) - Rueckmeldung der aktuellen Luefterstufe">
+    <lang id="de" value="1 Byte Prozent (DPT 5.001) - Rueckmeldung der aktuellen Luefterstufe" />
+    <lang id="en" value="1 byte percent (DPT 5.001) - Fan speed feedback from AC unit" />
+  </text>
+
+  <text key="#99-1_error_active" default="Stoerung aktiv">
+    <lang id="de" value="Stoerung aktiv" />
+    <lang id="en" value="Error active" />
+  </text>
+  <text key="#99-1_error_active_hlp" default="1 Bit - 1=Stoerung an der Anlage liegt vor (optional)">
+    <lang id="de" value="1 Bit - 1=Stoerung an der Anlage liegt vor (optional)" />
+    <lang id="en" value="1 bit - 1=Error present on AC unit (optional)" />
+  </text>
+
+  <text key="#99-1_error_code" default="Fehlercode">
+    <lang id="de" value="Fehlercode" />
+    <lang id="en" value="Error code" />
+  </text>
+  <text key="#99-1_error_code_hlp" default="14 Byte Text - Fehlercode/Stoerungstext der Anlage (optional)">
+    <lang id="de" value="14 Byte Text - Fehlercode/Stoerungstext der Anlage (optional)" />
+    <lang id="en" value="14 byte text - Error code/message from AC unit (optional)" />
+  </text>
+
+  <text key="#99-1_filter_status" default="Filter verstopft (Status)">
+    <lang id="de" value="Filter verstopft (Status)" />
+    <lang id="en" value="Filter clogged (status)" />
+  </text>
+  <text key="#99-1_filter_status_hlp" default="1 Bit - 1=Filter verstopft, Reinigung noetig (optional)">
+    <lang id="de" value="1 Bit - 1=Filter verstopft, Reinigung noetig (optional)" />
+    <lang id="en" value="1 bit - 1=Filter clogged, cleaning required (optional)" />
+  </text>
+
+  <text key="#99-1_filter_reset" default="Filter Reset (senden)">
+    <lang id="de" value="Filter Reset (senden)" />
+    <lang id="en" value="Filter reset (send)" />
+  </text>
+  <text key="#99-1_filter_reset_hlp" default="1 Bit - sendet 1 zum Quittieren der Filter-Stoerung (optional)">
+    <lang id="de" value="1 Bit - sendet 1 zum Quittieren der Filter-Stoerung (optional)" />
+    <lang id="en" value="1 bit - sends 1 to acknowledge filter alarm (optional)" />
+  </text>
+
+  <!-- Parameter -->
+  <text key="#99-1_par_min" default="Minimale Solltemperatur">
+    <lang id="de" value="Minimale Solltemperatur" />
+    <lang id="en" value="Minimum setpoint" />
+  </text>
+  <text key="#99-1_par_min_hlp" default="Untere Grenze fuer die Solltemperatur (typ. 16°C bei Daikin)">
+    <lang id="de" value="Untere Grenze fuer die Solltemperatur (typ. 16°C bei Daikin)" />
+    <lang id="en" value="Lower limit for setpoint (typ. 16°C for Daikin)" />
+  </text>
+
+  <text key="#99-1_par_max" default="Maximale Solltemperatur">
+    <lang id="de" value="Maximale Solltemperatur" />
+    <lang id="en" value="Maximum setpoint" />
+  </text>
+  <text key="#99-1_par_max_hlp" default="Obere Grenze fuer die Solltemperatur (typ. 32°C bei Daikin)">
+    <lang id="de" value="Obere Grenze fuer die Solltemperatur (typ. 32°C bei Daikin)" />
+    <lang id="en" value="Upper limit for setpoint (typ. 32°C for Daikin)" />
+  </text>
+
+  <text key="#99-1_par_skip" default="Schrittweite Temperatur">
+    <lang id="de" value="Schrittweite Temperatur" />
+    <lang id="en" value="Temperature step size" />
+  </text>
+  <text key="#99-1_par_skip_hlp" default="Aenderung pro Klick auf +/- (typ. 0.5°C oder 1.0°C)">
+    <lang id="de" value="Aenderung pro Klick auf +/- (typ. 0.5°C oder 1.0°C)" />
+    <lang id="en" value="Change per click on +/- (typ. 0.5°C or 1.0°C)" />
+  </text>
+
+  <!-- Timer-Aktionen -->
+  <text key="#99-1_tmr_on" default="Einschalten">
+    <lang id="de" value="Einschalten" />
+    <lang id="en" value="Switch on" />
+  </text>
+  <text key="#99-1_tmr_off" default="Ausschalten">
+    <lang id="de" value="Ausschalten" />
+    <lang id="en" value="Switch off" />
+  </text>
+  <text key="#99-1_tmr_mode_auto" default="Modus Auto">
+    <lang id="de" value="Modus Auto" />
+    <lang id="en" value="Mode Auto" />
+  </text>
+  <text key="#99-1_tmr_mode_heat" default="Modus Heizen">
+    <lang id="de" value="Modus Heizen" />
+    <lang id="en" value="Mode Heat" />
+  </text>
+  <text key="#99-1_tmr_mode_cool" default="Modus Kuehlen">
+    <lang id="de" value="Modus Kuehlen" />
+    <lang id="en" value="Mode Cool" />
+  </text>
+  <text key="#99-1_tmr_mode_fan" default="Modus Lueften">
+    <lang id="de" value="Modus Lueften" />
+    <lang id="en" value="Mode Fan" />
+  </text>
+  <text key="#99-1_tmr_mode_dry" default="Modus Trocknen">
+    <lang id="de" value="Modus Trocknen" />
+    <lang id="en" value="Mode Dry" />
+  </text>
+
+</language>

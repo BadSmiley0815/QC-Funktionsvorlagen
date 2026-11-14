@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Funktionsvorlage: Poolueberschuss
+  Datei: interface.xml
+
+  Vorgabewerte (Eingabe):
+    - power_max_set / power_min_set : Leistungs-Grenzwerte in W (4 Byte Float)
+    - soc_max_set   / soc_min_set   : SOC-Grenzwerte in %      (4 Byte Float)
+
+  Anzeigen:
+    - power_actual : aktueller Ueberschuss in W
+    - soc_actual   : aktueller SOC in %
+-->
+<template has_timer="false" function_key="firing" folder="firing">
+
+  <slots>
+
+    <!-- ========== EINGABEN (Grenzwerte) ========== -->
+
+    <slot id="power_max_set" text="#99-2_power_max" help="#99-2_power_max_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="power_min_set" text="#99-2_power_min" help="#99-2_power_min_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="soc_max_set" text="#99-2_soc_max" help="#99-2_soc_max_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="soc_min_set" text="#99-2_soc_min" help="#99-2_soc_min_hlp"
+          type="KO_NUM" required="true" />
+
+    <!-- ========== ANZEIGEN (Status) ========== -->
+
+    <slot id="power_actual" text="#99-2_power_actual" help="#99-2_power_actual_hlp"
+          type="KO_NUM" required="true" />
+
+    <slot id="soc_actual" text="#99-2_soc_actual" help="#99-2_soc_actual_hlp"
+          type="KO_NUM" required="true" />
+
+    <!-- ========== PARAMETER ========== -->
+    <!-- Eingabegrenzen fuer die numerische Eingabemaske im PopUp.
+         Diese verhindern, dass der Bediener ungueltige Werte eingibt. -->
+
+    <parameter id="par_power_min" text="#99-2_par_power_min" help="#99-2_par_power_min_hlp"
+               type="FLOAT" min="-100000" max="100000" default="-10000" />
+
+    <parameter id="par_power_max" text="#99-2_par_power_max" help="#99-2_par_power_max_hlp"
+               type="FLOAT" min="-100000" max="100000" default="10000" />
+
+    <parameter id="par_soc_min" text="#99-2_par_soc_min" help="#99-2_par_soc_min_hlp"
+               type="FLOAT" min="0" max="100" default="0" />
+
+    <parameter id="par_soc_max" text="#99-2_par_soc_max" help="#99-2_par_soc_max_hlp"
+               type="FLOAT" min="0" max="100" default="100" />
+
+  </slots>
+
+</template>

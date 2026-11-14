@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<language>
+
+  <text key="#99-2_tplname" default="Poolueberschuss">
+    <lang id="de" value="Poolueberschuss" />
+    <lang id="en" value="Pool surplus" />
+    <lang id="fr" value="Surplus piscine" />
+    <lang id="nl" value="Zwembadoverschot" />
+    <lang id="es" value="Excedente piscina" />
+    <lang id="it" value="Eccedenza piscina" />
+  </text>
+
+</language>

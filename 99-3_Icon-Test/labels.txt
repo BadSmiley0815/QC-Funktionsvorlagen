@@ -1,0 +1,3 @@
+99-3_tpl_ico_on=Icon-Test Lampe ein
+99-3_tpl_ico_off=Icon-Test Lampe aus
+99-3_tpl_ico_house=Icon-Test Haus

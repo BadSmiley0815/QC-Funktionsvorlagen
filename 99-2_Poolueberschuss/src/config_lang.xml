@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='utf-8'?>
+<language>
+
+  <!-- Vorlagenname -->
+  <text key="#99-2_tplname" default="Poolueberschuss">
+    <lang id="de" value="Poolueberschuss" />
+    <lang id="en" value="Pool surplus control" />
+  </text>
+
+  <!-- Slots: Eingaben -->
+  <text key="#99-2_power_max" default="Obere Leistungsgrenze (W)">
+    <lang id="de" value="Obere Leistungsgrenze (W)" />
+    <lang id="en" value="Upper power limit (W)" />
+  </text>
+  <text key="#99-2_power_max_hlp" default="4 Byte Float - Oberer Grenzwert fuer den Stromueberschuss in Watt (Eingabe)">
+    <lang id="de" value="4 Byte Float - Oberer Grenzwert fuer den Stromueberschuss in Watt (Eingabe)" />
+    <lang id="en" value="4 byte float - Upper limit for power surplus in watts (input)" />
+  </text>
+
+  <text key="#99-2_power_min" default="Untere Leistungsgrenze (W)">
+    <lang id="de" value="Untere Leistungsgrenze (W)" />
+    <lang id="en" value="Lower power limit (W)" />
+  </text>
+  <text key="#99-2_power_min_hlp" default="4 Byte Float - Unterer Grenzwert fuer den Stromueberschuss in Watt (Eingabe)">
+    <lang id="de" value="4 Byte Float - Unterer Grenzwert fuer den Stromueberschuss in Watt (Eingabe)" />
+    <lang id="en" value="4 byte float - Lower limit for power surplus in watts (input)" />
+  </text>
+
+  <text key="#99-2_soc_max" default="Oberer SOC-Grenzwert (%)">
+    <lang id="de" value="Oberer SOC-Grenzwert (%)" />
+    <lang id="en" value="Upper SOC limit (%)" />
+  </text>
+  <text key="#99-2_soc_max_hlp" default="4 Byte Float - Oberer Grenzwert fuer den Ladezustand SOC in Prozent (Eingabe)">
+    <lang id="de" value="4 Byte Float - Oberer Grenzwert fuer den Ladezustand SOC in Prozent (Eingabe)" />
+    <lang id="en" value="4 byte float - Upper limit for state of charge in percent (input)" />
+  </text>
+
+  <text key="#99-2_soc_min" default="Unterer SOC-Grenzwert (%)">
+    <lang id="de" value="Unterer SOC-Grenzwert (%)" />
+    <lang id="en" value="Lower SOC limit (%)" />
+  </text>
+  <text key="#99-2_soc_min_hlp" default="4 Byte Float - Unterer Grenzwert fuer den Ladezustand SOC in Prozent (Eingabe)">
+    <lang id="de" value="4 Byte Float - Unterer Grenzwert fuer den Ladezustand SOC in Prozent (Eingabe)" />
+    <lang id="en" value="4 byte float - Lower limit for state of charge in percent (input)" />
+  </text>
+
+  <!-- Slots: Anzeigen -->
+  <text key="#99-2_power_actual" default="Aktueller Ueberschuss (W)">
+    <lang id="de" value="Aktueller Ueberschuss (W)" />
+    <lang id="en" value="Current surplus (W)" />
+  </text>
+  <text key="#99-2_power_actual_hlp" default="4 Byte Float - Aktuell verfuegbarer Stromueberschuss in Watt (Anzeige)">
+    <lang id="de" value="4 Byte Float - Aktuell verfuegbarer Stromueberschuss in Watt (Anzeige)" />
+    <lang id="en" value="4 byte float - Currently available power surplus in watts (display)" />
+  </text>
+
+  <text key="#99-2_soc_actual" default="Aktueller SOC (%)">
+    <lang id="de" value="Aktueller SOC (%)" />
+    <lang id="en" value="Current SOC (%)" />
+  </text>
+  <text key="#99-2_soc_actual_hlp" default="4 Byte Float - Aktueller Ladezustand SOC in Prozent (Anzeige)">
+    <lang id="de" value="4 Byte Float - Aktueller Ladezustand SOC in Prozent (Anzeige)" />
+    <lang id="en" value="4 byte float - Current state of charge in percent (display)" />
+  </text>
+
+  <!-- Parameter: Eingabegrenzen -->
+  <text key="#99-2_par_power_min" default="Eingabegrenze Leistung min (W)">
+    <lang id="de" value="Eingabegrenze Leistung min (W)" />
+    <lang id="en" value="Input limit power min (W)" />
+  </text>
+  <text key="#99-2_par_power_min_hlp" default="Untere Eingabegrenze fuer das numerische PopUp bei den Leistungswerten">
+    <lang id="de" value="Untere Eingabegrenze fuer das numerische PopUp bei den Leistungswerten" />
+    <lang id="en" value="Lower input limit for the numeric popup on power values" />
+  </text>
+
+  <text key="#99-2_par_power_max" default="Eingabegrenze Leistung max (W)">
+    <lang id="de" value="Eingabegrenze Leistung max (W)" />
+    <lang id="en" value="Input limit power max (W)" />
+  </text>
+  <text key="#99-2_par_power_max_hlp" default="Obere Eingabegrenze fuer das numerische PopUp bei den Leistungswerten">
+    <lang id="de" value="Obere Eingabegrenze fuer das numerische PopUp bei den Leistungswerten" />
+    <lang id="en" value="Upper input limit for the numeric popup on power values" />
+  </text>
+
+  <text key="#99-2_par_soc_min" default="Eingabegrenze SOC min (%)">
+    <lang id="de" value="Eingabegrenze SOC min (%)" />
+    <lang id="en" value="Input limit SOC min (%)" />
+  </text>
+  <text key="#99-2_par_soc_min_hlp" default="Untere Eingabegrenze fuer das numerische PopUp bei den SOC-Werten">
+    <lang id="de" value="Untere Eingabegrenze fuer das numerische PopUp bei den SOC-Werten" />
+    <lang id="en" value="Lower input limit for the numeric popup on SOC values" />
+  </text>
+
+  <text key="#99-2_par_soc_max" default="Eingabegrenze SOC max (%)">
+    <lang id="de" value="Eingabegrenze SOC max (%)" />
+    <lang id="en" value="Input limit SOC max (%)" />
+  </text>
+  <text key="#99-2_par_soc_max_hlp" default="Obere Eingabegrenze fuer das numerische PopUp bei den SOC-Werten">
+    <lang id="de" value="Obere Eingabegrenze fuer das numerische PopUp bei den SOC-Werten" />
+    <lang id="en" value="Upper input limit for the numeric popup on SOC values" />
+  </text>
+
+</language>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template has_timer="false" function_key="" folder="misc">
+  <slots>
+    <slot id="switch" text="#99-3_switch" help="#99-3_switch_hlp" type="KO_NUM" required="true" />
+  </slots>
+</template>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Funktionsvorlage: Poolueberschuss
+  Datei: template.xml
+
+  Panel 1 (links):  Aktueller Ueberschuss in W (pan_ico_val_h)
+  Panel 2 (rechts): Aktueller SOC in %         (pan_ico_val_h)
+  Beide Panels oeffnen bei Klick das gleiche PopUp.
+
+  PopUp: 4 Edit-Felder fuer die Grenzwerte + OK
+-->
+<template>
+
+  <!-- ============================================================
+       PANEL 1: Aktueller Ueberschuss (W)
+       ============================================================ -->
+  <panel pos="1" click="1" layout="pan_ico_val_h">
+
+    <!-- Icon: Sonne/Energie als Symbol fuer "Ueberschuss" -->
+    <icon cell="icon" ico="tpl_ico_val_energy_input" />
+
+    <!-- Wert: aktueller Ueberschuss in W, formatiert ohne Nachkommastellen -->
+    <text_dyn cell="txt1" len="6" prec="0" unit=" W">
+      <content value_slot="power_actual" />
+    </text_dyn>
+
+    <!-- Klick oeffnet PopUp -->
+    <action_down click="1" type="popup" id="1" />
+
+  </panel>
+
+  <!-- ============================================================
+       PANEL 2: Aktueller SOC (%)
+       ============================================================ -->
+  <panel pos="2" click="1" layout="pan_ico_val_h">
+
+    <!-- Batterie-Icon: wechselt dynamisch je nach SOC-Wert (0-100%).
+         7 Stufen: 00 (leer) bis 06 (voll). -->
+    <icon_dyn cell="icon" ico="tpl_ico_battery00">
+      <content case_slot="soc_actual">
+        <case from="0"  from_type="2" to="15"  to_type="1" ico="tpl_ico_battery00" />
+        <case from="15" from_type="2" to="30"  to_type="1" ico="tpl_ico_battery01" />
+        <case from="30" from_type="2" to="45"  to_type="1" ico="tpl_ico_battery02" />
+        <case from="45" from_type="2" to="60"  to_type="1" ico="tpl_ico_battery03" />
+        <case from="60" from_type="2" to="75"  to_type="1" ico="tpl_ico_battery04" />
+        <case from="75" from_type="2" to="90"  to_type="1" ico="tpl_ico_battery05" />
+        <case from="90" from_type="2" to="100" to_type="2" ico="tpl_ico_battery06" />
+      </content>
+    </icon_dyn>
+
+    <!-- Wert: aktueller SOC in %, formatiert mit einer Nachkommastelle -->
+    <text_dyn cell="txt1" len="3" prec="1" unit=" %">
+      <content value_slot="soc_actual" />
+    </text_dyn>
+
+    <!-- Klick oeffnet das gleiche PopUp wie Panel 1 -->
+    <action_down click="1" type="popup" id="1" />
+
+  </panel>
+
+
+  <!-- ============================================================
+       POPUP 1: Eingabe der 4 Grenzwerte
+       Layout: 6 Zeilen (A-F) x 6 Spalten (1-6)
+         Spalten 1-2: Pmin / SOCmin
+         Spalten 3-4: Pmax / SOCmax
+         Spalten 5-6: OK (mittig in Zeile C-D)
+         Pro Wert eine Zeile Beschriftung + 2 Zeilen Edit-Feld.
+       ============================================================ -->
+  <popup id="1" layout="pop_green.form" ico="tpl_pop_bg">
+
+    <!-- Titel -->
+    <text layout="pop_green.caption" value="Poolueberschuss - Grenzwerte" />
+
+    <!-- ===== ZEILE A: BESCHRIFTUNGEN P min / P max (je 3 Spalten breit) ===== -->
+    <button layout="pop_btn_2" grid="grid1.A1-A3" type="1" text="Pmin" />
+    <button layout="pop_btn_2" grid="grid1.A4-A6" type="1" text="Pmax" />
+
+    <!-- ===== ZEILEN B-C: EDIT-FELDER P min / P max (edit_3 = 3 Spalten breit) ===== -->
+    <edit layout="edit_3" grid="grid1.B1-C3" type="1"
+          title="Untere Leistungsgrenze" slot="power_min_set"
+          len="6" prec="0" unit=" W"
+          min="$par_power_min" max="$par_power_max"
+          modify="true" />
+
+    <edit layout="edit_3" grid="grid1.B4-C6" type="1"
+          title="Obere Leistungsgrenze" slot="power_max_set"
+          len="6" prec="0" unit=" W"
+          min="$par_power_min" max="$par_power_max"
+          modify="true" />
+
+    <!-- ===== ZEILE D: BESCHRIFTUNGEN SOC min / SOC max (je 2 Spalten breit) ===== -->
+    <button layout="pop_btn_2" grid="grid1.D1-D2" type="1" text="SOC min" />
+    <button layout="pop_btn_2" grid="grid1.D3-D4" type="1" text="SOC max" />
+
+    <!-- ===== ZEILEN E-F: EDIT-FELDER SOC min / SOC max (edit_2 = 2 Spalten breit) ===== -->
+    <edit layout="edit_2" grid="grid1.E1-F2" type="1"
+          title="Unterer SOC-Grenzwert" slot="soc_min_set"
+          len="3" prec="1" unit=" %"
+          min="$par_soc_min" max="$par_soc_max"
+          modify="true" />
+
+    <edit layout="edit_2" grid="grid1.E3-F4" type="1"
+          title="Oberer SOC-Grenzwert" slot="soc_max_set"
+          len="3" prec="1" unit=" %"
+          min="$par_soc_min" max="$par_soc_max"
+          modify="true" />
+
+    <!-- ===== OK-BUTTON: rechts unten (Zeilen E-F, Spalten 5-6) ===== -->
+    <button layout="pop_btn_ok" grid="grid1.E5-F6" type="1" text="OK">
+      <action_up type="close" />
+    </button>
+
+  </popup>
+
+</template>

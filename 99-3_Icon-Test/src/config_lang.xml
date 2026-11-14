@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<language>
+  <text key="#99-3_tplname" default="Icon-Test">
+    <lang id="de" value="Icon-Test" />
+    <lang id="en" value="Icon test" />
+  </text>
+  <text key="#99-3_switch" default="Schalten">
+    <lang id="de" value="Schalten" />
+    <lang id="en" value="Switch" />
+  </text>
+  <text key="#99-3_switch_hlp" default="1 Bit – Schalten und Rückmeldung (0 = Lampe aus, 1 = Lampe ein)">
+    <lang id="de" value="1 Bit – Schalten und Rückmeldung (0 = Lampe aus, 1 = Lampe ein)" />
+    <lang id="en" value="1 bit – switch and status (0 = off, 1 = on)" />
+  </text>
+</language>
